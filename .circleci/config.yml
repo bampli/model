@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  test:
+    docker:
+      - image: circleci/python:2.7
+    steps:
+      - checkout
+      - run:
+          name: Install publisher and dependencies
+          command: |
+            sudo make install_prerequisites
+            sudo apt-get update
+            sudo apt-get install ruby ruby-dev
+            sudo gem install hiptest-publisher
+      - run:
+          name: Run tests
+          command: |
+            hiptest-publisher --config behave.conf \
+              --token $SECRET_TOKEN \
+              --test-run-id $TEST_RUN_ID \
+              --without=actionwords
+            behave --format json -o results/results.json
+      - run:
+          name: Push results
+          command: |
+            hiptest-publisher --config behave.conf \
+              --token $SECRET_TOKEN \
+              --test-run-id $TEST_RUN_ID \
+              --push=results/results.json \
+              --execution-environment=CircleCI \
+              --global-failure-on-missing-reports
+          when: always
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - test
