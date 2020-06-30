@@ -1,7 +1,5 @@
-# bAmpli BDD model
+# bAmpli model
 [![Build Status](https://travis-ci.org/bampli/model.svg?branch=master)](https://travis-ci.org/bampli/model)
-
-Hiptest publisher with Behave: in this repository you'll find tests generated in Behave format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
 
 The goals are:
 
@@ -32,3 +30,6 @@ To build the project and run the tests, use the following command:
 The SUT implementation can be seen in [``src/coffee_machine.py``](https://github.com/hiptest/hps-behave/blob/master/src/coffee_machine.py)
 
 The test report is generated in ```results/```
+
+Note: Hiptest publisher with Behave: in this repository you'll find tests generated in Behave format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
+
