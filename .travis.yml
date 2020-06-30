@@ -6,10 +6,10 @@ before_install:
   - rvm install 2.3
   - rvm use 2.3
   - gem install hiptest-publisher
-  - "hiptest-publisher -c behave.conf --token=$SECRET_TOKEN --only=features,step_definitions --test-run-id=429860"
+  - "hiptest-publisher -c behave.conf --only=features,step_definitions --test-run-id=429860"
 
 script:
  - behave --format json -o results/results.json
 
 after_script:
- - hiptest-publisher -c behave.conf --token=$SECRET_TOKEN --push=results/results.json --test-run-id=16134
+ - hiptest-publisher -c behave.conf --push=results/results.json --test-run-id=429860
