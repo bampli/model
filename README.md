@@ -1,10 +1,12 @@
-# bAmpli model
 [![Build Status](https://travis-ci.org/bampli/model.svg?branch=master)](https://travis-ci.org/bampli/model)
+
+# bAmpli model
 
 The goals are:
 
- * show bAmpli tests results
- * develop exports implemented as actionwords
+ * develop bAmpli specs
+ * run bAmpli tests
+ * develop actionwords
 
 System under test
 ------------------
