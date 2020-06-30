@@ -10,6 +10,9 @@ class Actionwords:
     def i_start_the_coffee_machine_using_language_lang(self, lang = "en"):
         self.sut.start(lang)
 
+    def a_notification_about_descaling_is_displayed(self):
+        assert self.sut.is_descaling_needed() is True
+
     def i_shutdown_the_coffee_machine(self):
         self.sut.stop()
 
