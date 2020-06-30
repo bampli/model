@@ -31,5 +31,5 @@ The SUT implementation can be seen in [``src/coffee_machine.py``](https://github
 
 The test report is generated in ```results/```
 
-Note: Hiptest publisher with Behave: in this repository you'll find tests generated in Behave format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
+Note: Hiptest publisher with Behave: tests generated in Behave format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
 
