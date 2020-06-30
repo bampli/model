@@ -1,23 +1,20 @@
-# hps-behave
+# bAmpli BDD model
 [![Build Status](https://travis-ci.org/bampli/model.svg?branch=master)](https://travis-ci.org/bampli/model)
 
-Hiptest publisher samples with Behave
-
-In this repository you'll find tests generated in Behave format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
+Hiptest publisher with Behave: in this repository you'll find tests generated in Behave format from [Hiptest](https://hiptest.com), using [Hiptest publisher](https://github.com/hiptest/hiptest-publisher).
 
 The goals are:
 
- * to show how tests are exported in Behave.
- * to check exports work out of the box (well, with implemented actionwords)
+ * show bAmpli tests results
+ * develop exports implemented as actionwords
 
 System under test
 ------------------
 
-The SUT is a (not that much) simple coffee machine. You start it, you ask for a coffee and you get it, sometimes. But most of times you have to add water or beans, empty the grounds. You have an automatic expresso machine at work or at home? So you know how it goes :-)
+The SUT is (being transformed from) a simple coffee machine. You start it, you ask for a coffee and you get it, sometimes. But most of times you have to add water or beans, empty the grounds. You have an automatic expresso machine at work or at home? So you know how it goes :-)
 
 Update tests
 -------------
-
 
 To update the tests:
 
@@ -27,7 +24,6 @@ The tests are generated in the [``features``](https://github.com/hiptest/hps-beh
 
 Run tests
 ---------
-
 
 To build the project and run the tests, use the following command:
 
