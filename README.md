@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/bampli/model.svg?branch=master)](https://travis-ci.org/bampli/model)
+[![Build Status](https://api.travis-ci.org/bampli/model.svg?branch=master)](https://travis-ci.org/bampli/model)
 
 # bAmpli model
 
