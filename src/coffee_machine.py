@@ -32,12 +32,12 @@ class CoffeeMachine:
         sort = '\"name ASC\"' # str | Order in which to retrieve the results. Multiple sort criteria can be passed. Example: sort=name ASC,city DESC (optional)
         name = '\"George Street Brewery\"' # str | Allows to filter the collections of result by the value of name (optional)
 
-        try:
-            # Load the list of Companies
-            api_response = api_instance.search_companies(size=size, page=page, sort=sort, name=name)
-            pprint(api_response)
-        except ApiException as e:
-            print("Exception when calling CompanyApi->search_companies: %s\n" % e)
+        # try:
+        #     # Load the list of Companies
+        #     api_response = api_instance.search_companies(size=size, page=page, sort=sort, name=name)
+        #     pprint(api_response)
+        # except ApiException as e:
+        #     print("Exception when calling CompanyApi->search_companies: %s\n" % e)
 
     def start(self, lang = 'en'):
         self.started = True
