@@ -2,6 +2,7 @@ language: python
 sudo: false
 
 before_install:
+  - pip install git+https://github.com/bampli/swagger-client.git
   - pip install behave
   - rvm install 2.3
   - rvm use 2.3

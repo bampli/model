@@ -1,3 +1,9 @@
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
 class CoffeeMachine:
     def __init__(self):
         self.started = False
@@ -13,6 +19,22 @@ class CoffeeMachine:
 
         self._water_hardness = 2
         self._grinder = 'medium'
+        # Configure HTTP basic authorization: HTTP_BASIC
+        configuration = swagger_client.Configuration()
+        configuration.username = '1'
+        configuration.password = '1'
+
+        # create an instance of the API class
+        api_instance = swagger_client.CompanyApi(swagger_client.ApiClient(configuration))
+        body = swagger_client.Company() # Company | 
+
+        try:
+            # Create a new Company
+            api_response = api_instance.add_company(body)
+            pprint(api_response)
+        except ApiException as e:
+            print("Exception when calling CompanyApi->add_company: %s\n" % e)
+
 
     def start(self, lang = 'en'):
         self.started = True
