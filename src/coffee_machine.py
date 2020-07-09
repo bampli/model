@@ -23,19 +23,21 @@ class CoffeeMachine:
         configuration = swagger_client.Configuration()
         configuration.username = '1'
         configuration.password = '1'
+        #configuration.host = "https://virtserver.swaggerhub.com/motta/bampli/1.0.0-oas3"
 
         # create an instance of the API class
         api_instance = swagger_client.CompanyApi(swagger_client.ApiClient(configuration))
-        body = swagger_client.Company() # Company | 
-        body.company_id = '1'
+        size = 10 # int | Size of the page to retrieve. (optional)
+        page = 1 # float | Number of the page to retrieve. (optional)
+        sort = '\"name ASC\"' # str | Order in which to retrieve the results. Multiple sort criteria can be passed. Example: sort=name ASC,city DESC (optional)
+        name = '\"George Street Brewery\"' # str | Allows to filter the collections of result by the value of name (optional)
 
         try:
-            # Create a new Company
-            api_response = api_instance.add_company(body)
+            # Load the list of Companies
+            api_response = api_instance.search_companies(size=size, page=page, sort=sort, name=name)
             pprint(api_response)
         except ApiException as e:
-            print("Exception when calling CompanyApi->add_company: %s\n" % e)
-
+            print("Exception when calling CompanyApi->search_companies: %s\n" % e)
 
     def start(self, lang = 'en'):
         self.started = True
