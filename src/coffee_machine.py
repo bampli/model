@@ -27,6 +27,7 @@ class CoffeeMachine:
         # create an instance of the API class
         api_instance = swagger_client.CompanyApi(swagger_client.ApiClient(configuration))
         body = swagger_client.Company() # Company | 
+        body.company_id = '1'
 
         try:
             # Create a new Company
